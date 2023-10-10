@@ -53,7 +53,7 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
-            name: hello.txt
+            name: hello
       - name: Deploy
         run: |
           echo "Deploying"
