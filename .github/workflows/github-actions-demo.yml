@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: hello
-          path: dist
+          path: dist.txt
 
 
 
