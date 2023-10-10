@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: hello
-          path: dist.txt
+          path: hello.txt
 
 
 
@@ -53,7 +53,7 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
-            name: hello
+            name: hello.txt
       - name: Deploy
         run: |
           echo "Deploying"
