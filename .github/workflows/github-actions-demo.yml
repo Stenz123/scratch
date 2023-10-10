@@ -37,10 +37,12 @@ jobs:
           pwd
           ls -l
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
-          name: Hello
+          name: hello
           path: dist
+
+
 
   deploy:
     needs:
@@ -48,6 +50,10 @@ jobs:
       - docs
     runs-on: ubuntu-22.04
     steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+            name: hello
       - name: Deploy
         run: |
           echo "Deploying"
